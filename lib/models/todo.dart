@@ -1,19 +1,22 @@
-class Todo {
-  String id;
-  String title;
+class ToDo {
+  String? id;
+  String? todoText;
   bool isDone;
 
-  Todo({required this.id, required this.title, required this.isDone});
+  ToDo({
+    required this.id,
+    required this.todoText,
+    this.isDone = false,
+  });
 
-  void isToggleDone() {
-    isDone = !isDone;
-  }
-
-  static List<Todo> toDosList(){
-    return[
-    Todo(id: '1', title: 'Learn Flutter', isDone: true),
-    Todo(id: '2', title: 'Learn Dart', isDone: false),
-    Todo(id: '3', title: 'Learn Provider', isDone: false),
+  static List<ToDo> todoList() {
+    return [
+      ToDo(id: '01', todoText: 'Morning Excercise', isDone: true ),
+      ToDo(id: '02', todoText: 'Buy Groceries', isDone: true ),
+      ToDo(id: '03', todoText: 'Check Emails', ),
+      ToDo(id: '04', todoText: 'Team Meeting', ),
+      ToDo(id: '05', todoText: 'Work on mobile apps for 2 hour', ),
+      ToDo(id: '06', todoText: 'Dinner with Jenny', ),
     ];
   }
 }
